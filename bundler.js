@@ -37,10 +37,13 @@ module.exports = function bundle (Components, out, config) {
     init = init + `
       import React from "react";\n
       import ReactDOM from "react-dom";\n
+      
+      const {createRoot} = require("react-dom/client");
 
       import ReactWrapper from '${reactWrapperRelPath}';\n
       window.React = React;\n
       window.ReactDOM = ReactDOM;\n
+      window.createRoot = createRoot
       window.ReactWrapper = ReactWrapper;\n
     `
   }
